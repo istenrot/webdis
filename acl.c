@@ -33,7 +33,7 @@ acl_match_client(struct acl *a, struct evhttp_request *rq, in_addr_t *ip) {
 int
 acl_allow_command(struct cmd *cmd, struct conf *cfg, struct evhttp_request *rq) {
 
-	char *always_off[] = {"MULTI", "EXEC", "WATCH", "DISCARD"};
+	char *always_off[] = {"MULTI", "EXEC", "WATCH", "DISCARD", "SLAVEOF", "SHUTDOWN", "QUIT", "CONFIG SET", "FLUSHALL", "AUTH", "MONITOR", "DEBUG SEGFAULT"};
 
 	unsigned int i;
 	int authorized = 1;
